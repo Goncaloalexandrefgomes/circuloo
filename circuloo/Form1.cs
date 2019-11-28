@@ -17,9 +17,14 @@ namespace circuloo
             InitializeComponent();
         }
 
+        circulo C = new circulo();
+
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            C.Raio = Convert.ToDouble(textBox1.Text);
+            if (radioButton1.Checked) label3.Text = C.Area.ToString();
+            else if (radioButton2.Checked) label3.Text = C.Perimetro.ToString();
+            else if (radioButton3.Checked) label3.Text = C.Diametro.ToString();
         }
     }
 }
